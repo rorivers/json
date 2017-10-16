@@ -18,7 +18,12 @@ app.get('/.well-known/assetlinks.json', function(req, res){
 });
 
 app.get('/', function(req, res){
-	res.send('Hello World!');
+	res.send('Hello World!\n  --from aliyun');
+});
+
+app.get('/investmentdetails.html', function(req, res) {
+	var projId = req.query.projectid;
+	res.send('Project id is ' + projId + '\n  --from aliyun');
 });
 
 app.listen('80');
